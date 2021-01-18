@@ -1,0 +1,206 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    background-image: linear-gradient(hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+    max-height: 100%;
+    min-width: 270px;
+    overflow: hidden;
+}
+.container{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    place-items: center;
+}
+#header{
+    border:hsl(217, 16%, 45%) solid 4px; 
+    border-radius: 10px;
+    margin: auto; 
+    width: 500px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+#heading{
+    color: #fff;
+    font-size: 2rem;
+    line-height: 100%;   
+}
+#score-card{
+    background-color: white;
+    border-radius: 8px;
+    color: hsl(229, 64%, 46%);
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-top: 20px;
+}
+#score,#mark{
+    line-height: 100%;
+    margin: 0%;
+}
+#mark{
+    color: hsl(229, 25%, 31%);
+    font-size: 3rem; 
+}
+.main{
+    width: 500px;
+    margin: auto;
+    background-image: url(../images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 270px;
+}
+.main-row{
+    justify-content: center;
+}
+.toggle-display-main,.round-result{
+    display: none;
+}
+#round-result{
+    margin: 80px 0px 80px 0px;
+}
+.rock,.paper,.scissors{
+    border-radius: 60px;
+    width: max-content;
+    margin: 30px;
+    border: none;
+    outline: none;
+    transform: scale(1.2);
+}
+button:focus{
+    border: none;
+    outline: none;
+}
+.scissors{
+    background-image: linear-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+}
+.rock{
+    background-image: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+}
+.paper{
+    background-image: linear-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
+}
+.inner{
+    background-color: white;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 60px;
+    width: max-content;
+}
+#rules{
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin: 20px auto 10px auto;
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+}
+.scoring{
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.user-selected,.comp-selected{
+    display: flex;
+    justify-content: center;
+    transform: scale(1.5);
+    margin: auto;
+    margin-top: 50px ;
+}
+.continue-section{
+    margin-top: 100px;
+}
+.continue-section-bottom{
+    margin-top: 50px;
+}
+.continue-btn{   
+    letter-spacing: 3px;
+    text-align: center;
+    width: 50%;
+    padding: 15px;
+}
+.result{
+    font-size: 2.5rem;
+    letter-spacing: normal;
+    font-weight: 900;
+}
+#winner{
+    margin-top: 100px;
+}
+.winner-div-display{
+    display: none;
+}
+#winner-result{
+    color: #fff;
+    font-size: 4rem;
+}
+#play-again-button{
+    padding: 20px;
+}
+@media (max-width: 770px){
+    .main{
+        margin-top: 10px;
+    }
+}
+@media (max-width: 580px){
+    #header{ 
+        width: 90%;
+    } 
+    .main{
+        background-size: 250px;
+    }
+    .user-selected,.comp-selected{
+        display: flex;
+        justify-content: center;
+        transform: scale(1);
+        margin: auto;
+        margin-top: 50px ;
+    }
+}
+@media (max-width: 410px){
+    .rock,.paper,.scissors{  
+        transform: scale(1);
+        margin: 10px;
+    }
+    .inner{
+        margin: 10px;
+        padding: 15px;
+    }
+    #heading{
+        font-size: 1.5rem;
+    }
+    #mark{
+        font-size: 2rem;
+    }
+    #score-card{
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+    #rules{
+        margin: 80px auto 40px auto;
+    }
+    .main{
+        background-size: 180px;
+    }
+    .continue-section{
+        margin-top: 200px;
+    }
+    #winner-result{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 300px){
+    .rock,.paper,.scissors{  
+        transform: scale(0.8);
+        margin: 5px;
+    }
+    .main{
+        background-size: 140px;
+    }
+}

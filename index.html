@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock Paper Scissors</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="container">
+  <header id="header" class="row">
+    <div class="col-3">
+      <span id="heading">ROCK </span>
+      <span id="heading">PAPER </span>
+      <span id="heading">SCISSORS </span>
+    </div>
+    <div class="col-5"></div>
+    <div id="score-card" class="col-4">
+      <p id="score">SCORE</p>
+      <p id="mark">0/0</p>
+    </div>
+  </header>
+  <main class="main col">
+    <div class="row main-row">
+      <button id="paper" class="user-choice paper">
+        <div class="inner">
+          <img src="images/icon-paper.svg" alt="icon-paper" />
+        </div>
+      </button>
+      <button id="scissors" class="user-choice scissors">
+        <div class="inner">
+          <img src="images/icon-scissors.svg" alt="icon-scissors" />
+        </div>
+      </button>
+    </div>
+    <div class="row main-row">
+      <button id="rock" class="user-choice rock">
+        <div class="inner">
+          <img src="images/icon-rock.svg" alt="icon-rock" />
+        </div>
+      </button>
+    </div>
+  </main>
+
+  <div class="row round-result" id="round-result">
+    <div class="col-md-4 col-sm-6 col-6">
+      <p class="scoring">YOU PICKED</p>
+      <div class="user-selected shadow"></div>
+    </div>
+    <div class="col-md-4 text-center d-none d-md-block">
+      <div class="continue-section">
+        <p class="scoring result"></p>
+        <button class="btn btn-light continue-btn">
+          PLAY
+        </button>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-6">
+      <p class="scoring">HOUSE PICKED</p>
+      <div class="comp-selected"></div>
+    </div>
+    <div class="text-center col-12 d-block d-md-none">
+      <div class="continue-section-bottom">
+        <p class="scoring result"></p>
+        <button class="btn btn-light continue-btn">
+          PLAY
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="winner" class="container-fluid text-center">
+    <p id="winner-result"></p>
+    <button class="btn btn-light" id="play-again-button">PLAY AGAIN</button>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
