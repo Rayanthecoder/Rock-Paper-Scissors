@@ -132,6 +132,7 @@ button:focus{
 }
 #winner{
     margin-top: 100px;
+    display: none;
 }
 .winner-div-display{
     display: none;

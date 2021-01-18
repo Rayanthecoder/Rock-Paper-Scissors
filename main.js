@@ -42,7 +42,7 @@ const declareWinner = () => {
     resultOfRound.classList.toggle("round-result"); 
     let winner = document.getElementById('winner-result');
     winner.innerText = findWinner() + " WON !!";
-    winnerDiv.classList.remove('winner-div-display');
+    winnerDiv.style.display =  "block";
 }
 
 buttons.forEach((btn) => {
@@ -76,5 +76,5 @@ document.getElementById('play-again-button').addEventListener("click" , () =>{
     score["computer"] = 0;
     mark.innerText = 0 + "/" + 0;
     main.classList.toggle("toggle-display-main");
-    winnerDiv.classList.add("winner-div-display");
+    winnerDiv.style.display = "none";
 });
