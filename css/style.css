@@ -2,7 +2,7 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-}
+} 
 html{
     height: 100%;
 }
@@ -25,7 +25,7 @@ body{
     margin-bottom: 30px;
     padding: 15px;
 }
-#heading{
+.heading{
     color: #fff;
     font-size: 2rem;
     line-height: 100%;   
@@ -78,7 +78,6 @@ button:focus{
 }
 .scissors{
     background-image: linear-gradient(hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
-    
 }
 .rock{
     background-image: linear-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
@@ -87,7 +86,7 @@ button:focus{
     background-image: linear-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
 }
 .inner{
-    box-shadow: inset 5px 4px 0px -1px rgba(189, 188, 188, 0.712);
+    box-shadow: inset 0px 5px rgba(189, 188, 188, 0.712);
     background-color: white;
     margin: 15px;
     padding: 20px;
@@ -146,9 +145,6 @@ button:focus{
 }
 #play-again-button{
     padding: 20px;
-}
-.shadow{
-    box-shadow: 3px 3px 3px black;
 }
 @media (max-width: 770px){
     .main{
