@@ -15,6 +15,13 @@ const toggleDisplay = () => {
     main.classList.toggle("toggle-display-main");
     resultOfRound.classList.toggle("round-result"); 
 }
+const declareWinner = () => {
+    resultOfRound.classList.toggle("round-result"); 
+    let winner = document.getElementById('winner-result');
+    winner.innerText = findWinner() + " WON !!";
+    winnerDiv.style.display =  "block";
+}
+
 const showRoundResult = (user,computer) => {
     computerChoice = document.querySelector('.comp-selected');
     computerChoice.innerHTML = document.getElementById(computer).innerHTML;
@@ -22,6 +29,10 @@ const showRoundResult = (user,computer) => {
     userChoice = document.querySelector('.user-selected');
     userChoice.innerHTML = document.getElementById(user).innerHTML;
     userChoice.classList.add(user);
+    if(score["user"] === 5 || score["computer"] === 5){
+        setTimeout(declareWinner, 500);
+    }
+
 }
 const roundResult = (userChoice,computerChoice) => {
     if(userChoice === computerChoice)
@@ -38,13 +49,6 @@ const computerPlay = () => { return game[Math.floor(Math.random()*3)]; }
 
 const findWinner = () => { return (score["user"] === 5) ? "USER" : "COMPUTER"; }
 
-const declareWinner = () => {
-    resultOfRound.classList.toggle("round-result"); 
-    let winner = document.getElementById('winner-result');
-    winner.innerText = findWinner() + " WON !!";
-    winnerDiv.style.display =  "block";
-}
-
 buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
         userSelection = btn.id;
@@ -56,8 +60,6 @@ buttons.forEach((btn) => {
         mark.innerText = score["user"] + "/" + score["computer"];
         toggleDisplay();
         showRoundResult(userSelection,computerSelection);
-        if(score["user"] === 5 || score["computer"] === 5)
-            declareWinner();
     });
 });
 
